@@ -12,7 +12,29 @@ int main (void)
 	int value = 55;
 	int i = 0;
 	int *pvtest = (int*)malloc(5*sizeof(int));
+	
 
+	/*2015 11/13 interview */
+	int a[8] = {1,2,4,8,16,32,64,128};
+	int *p=a;
+	int *q=a;
+	int *t=a;
+	printf("2015.11.13 interview test:\r\n");
+	for(i=0;i<5;i++)
+		printf("print *(p++)  = %d\r\n",*(p++));
+
+	for(i=0;i<5;i++)
+		printf("print *(++p) = %d\r\n",*(q++));
+
+	*(t++) += 123;
+	for(i=0;i<5;i++)
+		printf("print *t=%d\r\n",t[i]);
+	*(++t) += 234;
+
+	for(i = 0;i<5;i++)
+		printf("print *t=%d\r\n",t[i]);
+
+	printf("\r\n");
 	printf("This is wayne`s cpoint test\r\n");
 	printf("****************************\r\n");
 	for(i=0;i<5;i++)
